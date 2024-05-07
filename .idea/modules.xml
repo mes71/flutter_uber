@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/flutter_uber.iml" filepath="$PROJECT_DIR$/flutter_uber.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user_app/user_app.iml" filepath="$PROJECT_DIR$/user_app/user_app.iml" />
     </modules>
   </component>
 </project>

@@ -1,7 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:user_app/data/utils/connectiviy_util.dart';
 import 'package:user_app/presentation/ui/utils/utils.dart';
+import 'package:user_app/presentation/ui/widgets/snakbar_widget.dart';
+
+//TODO form validation with bloc
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
@@ -87,7 +91,14 @@ class _SignUpPageState extends State<SignUpPage> {
               ),
               const SizedBox(height: 40),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  checkConnectivity().then((hasConnection) {
+                    if (hasConnection) {
+                    } else {
+                      displaySnakeBar(context, 'No internet connection');
+                    }
+                  });
+                },
                 style: ElevatedButton.styleFrom(
                   fixedSize: const Size(180, 50),
                   shape: RoundedRectangleBorder(
